@@ -1,6 +1,26 @@
 # 目醒めのとびら
 
-そうちゃん＆はるちゃんのセミナー紹介ページ。白・淡いピンク・水色を使った、スマートフォン対応のランディングページです。
+そうちゃん＆はるちゃんの公式ホームページと、15分の無料動画への集客専用LPです。白・淡いピンク・水色を使った、スマートフォン対応のデザインです。
+
+## 2つのページを別々に編集する
+
+| 用途 | ページ | 色・レイアウト | 動画・申し込み先 |
+| --- | --- | --- | --- |
+| 公式ホームページ | `index.html` | `styles.css` | `script.js` の `VIDEO_URL` |
+| 集客専用LP | `lp/index.html` | `lp/styles.css` | `lp/script.js` の `APPLICATION_URL` |
+
+公式ホームページのファイルとURLは従来のままです。LPは画像も含めて独立して編集できます。LPの申し込み先は未設定で、仮リンクを使わずボタンを無効にしています。
+
+LPのCSS・JavaScript・画像を編集したら `python3 lp/build_preview.py` でLPだけ更新してください。公式ホームページの更新コマンドは従来どおり `python3 build_preview.py` です。
+
+詳しい編集手順・申し込み先設定は [LPの説明](lp/README.md) をご覧ください。ZIPを展開したら、公式はルートの `index.html`、LPは `lp/index.html` をブラウザで開きます。
+
+公開後のURL：
+
+- 公式ホームページ（変更なし）：https://souchan558877.github.io/my-first-app/
+- 集客専用LP：https://souchan558877.github.io/my-first-app/lp/
+
+新しいLPは、GitHubへの保存とPagesの公開処理が終わってから公開URLで表示されます。
 
 ![完成ページの表示確認](docs/preview-desktop.png)
 
